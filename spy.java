@@ -1,5 +1,6 @@
 public class spy {
     public static void main(String[] args){
+        // find spy number or nor
         // whose sum and product or digits are same
         int n = 1124;
         int sum = 0;
