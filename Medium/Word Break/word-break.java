@@ -20,7 +20,7 @@ public class GfG
                             arr.add(p);
                         }
                     String line = sc.next();
-                    Sol obj = new Sol();  
+                    Solution obj = new Solution();  
                     System.out.println(obj.wordBreak(line,arr));  
                     
                 }
@@ -31,7 +31,7 @@ public class GfG
 
 //User function Template for Java
 
-class Sol
+class Solution
 {
     public static int wordBreak(String A, ArrayList<String> B )
         {
