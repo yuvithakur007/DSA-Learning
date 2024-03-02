@@ -16,7 +16,7 @@ public class Main {
             int n = Integer.parseInt(br.readLine().trim());
             String[] arr = br.readLine().trim().split(" ");
 
-            String ans = new Solution().printLargest(arr);
+            String ans = new Solution().printLargest(n, arr);
             System.out.println(ans);
         }
     }
@@ -27,8 +27,17 @@ public class Main {
 //User function Template for Java
 
 class Solution {
-    String printLargest(String[] nums) {
-            Arrays.sort(nums, (a,b) -> (b+a).compareTo(a+b));
-            return nums[0].equals("0")?"0":String.join("", nums);
+    String printLargest(int n, String[] arr) {
+        StringBuilder res = new StringBuilder();
+        Arrays.sort(arr, (a, b)->{
+            String ab = a + b;
+            String ba = b + a;
+            return ba.compareTo(ab);
+        });
+        for(String x : arr){
+            res.append(x);
+        }
+        return res.toString();
     }
+ 
 }
